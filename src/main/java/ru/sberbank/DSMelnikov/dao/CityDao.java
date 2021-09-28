@@ -34,6 +34,10 @@ public class CityDao {
     }
 
     public List<City> findAllSorted() {
-        return (List<City>) HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From City c order by c.name desc").list();
+        return (List<City>) HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From City c order by c.name asc").list();
+    }
+
+    public List<City> findAllSortedByDistrictAndName() {
+        return (List<City>) HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From City c order by c.name asc, c.name asc").list();
     }
 }

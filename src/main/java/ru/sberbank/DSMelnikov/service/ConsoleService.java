@@ -14,10 +14,11 @@ public class ConsoleService {
     public static void showMenuMessage() {
         System.out.print("Выберете требуемое действие:\n" +
                 "1) Список городов.\n" +
-                "2) Отсортированный список городов.\n" +
-                "3) Найти город с наибольшим количеством жителей\n" +
-                "4) Определить количество городов в развезе регионов\n" +
-                "5) Выйти\n");
+                "2) Отсортированный список городов по названию города.\n" +
+                "3) Отсортированный список городов по федеральному округу и названию.\n" +
+                "4) Найти город с наибольшим количеством жителей\n" +
+                "5) Определить количество городов в развезе регионов\n" +
+                "6) Выйти\n");
     }
 
     public static List<City> scanFile(String file) throws IOException {
@@ -57,8 +58,8 @@ public class ConsoleService {
     public static int readInput() {
         try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in))) {
             int i = Integer.parseInt(bufferedReader.readLine());
-            if (!(i >= 1 && i <= 5)) {
-                System.out.println("Введите корректное число (от 1 до 5)");
+            if (!(i >= 1 && i <= 6)) {
+                System.out.println("Введите корректное число (от 1 до 6)");
                 return readInput();
             }
             return i;

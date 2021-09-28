@@ -46,9 +46,14 @@ public class Main {
                 }
                 break;
             case 3:
-                System.out.println(cityService.findMaxPopulationCity());
+                for (City city : cityService.findAllSortedByDistrictAndName()) {
+                    System.out.println(city);
+                }
                 break;
             case 4:
+                System.out.println(cityService.findMaxPopulationCity());
+                break;
+            case 5:
                 for (Map.Entry<String, Integer> entry : cityService.findCitiesNumberInRegions().entrySet()) {
                     System.out.printf("[%s] = %d\n", entry.getKey(), entry.getValue());
                 }

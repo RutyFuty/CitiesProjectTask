@@ -27,6 +27,10 @@ public class CityService {
         return cityDao.findAllSorted();
     }
 
+    public List<City> findAllSortedByDistrictAndName() {
+        return cityDao.findAllSortedByDistrictAndName();
+    }
+
     public City findMaxPopulationCity() {
         return findAllCities().stream().max(Comparator.comparing(City::getPopulation)).get();
     }
