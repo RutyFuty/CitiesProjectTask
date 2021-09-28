@@ -51,7 +51,8 @@ public class Main {
                 }
                 break;
             case 4:
-                System.out.println(cityService.findMaxPopulationCity());
+                City cityWithMaxPopulation = cityService.findMaxPopulationCity();
+                System.out.printf("[%d] = %d", cityWithMaxPopulation.getId(), cityWithMaxPopulation.getPopulation());
                 break;
             case 5:
                 for (Map.Entry<String, Integer> entry : cityService.findCitiesNumberInRegions().entrySet()) {
@@ -61,6 +62,7 @@ public class Main {
             default:
                 break;
         }
+
 
     }
 }
