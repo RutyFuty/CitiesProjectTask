@@ -27,7 +27,7 @@ public class Main {
 
         int select = ConsoleService.readInput();
 
-        if (select == 0 || select == 5) return;
+        if (select == 0 || select == 6) return;
 
         CityService cityService = new CityService();
 
