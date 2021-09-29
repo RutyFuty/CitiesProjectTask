@@ -56,7 +56,8 @@ public class ConsoleService {
     }
 
     public static int readInput() {
-        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in))) {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        try {
             int i = Integer.parseInt(bufferedReader.readLine());
             if (!(i >= 1 && i <= 6)) {
                 System.out.println("Введите корректное число (от 1 до 6)");
